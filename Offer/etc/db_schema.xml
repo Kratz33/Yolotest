@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="yolotest_offer" resource="default" engine="innodb" comment="Offer Table">
+        <column name="offer_id" xsi:type="int" nullable="false" identity="true" comment="Offer ID"/>
+        <column name="label" xsi:type="varchar" nullable="false" length="255" comment="Label"/>
+        <column name="image" xsi:type="varchar" nullable="false" length="255" comment="Image"/>
+        <column name="redirect_url" xsi:type="varchar" nullable="false" length="255" comment="Redirect URL"/>
+        <column name="category_ids" xsi:type="text" nullable="false" comment="Category IDs"/>
+        <column name="start_date" xsi:type="datetime" nullable="false" comment="Start Date"/>
+        <column name="end_date" xsi:type="datetime" nullable="false" comment="End Date"/>
+        <column name="created_at" xsi:type="timestamp" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+        <column name="updated_at" xsi:type="timestamp" nullable="true" on_update="true" comment="Updated At"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="offer_id" />
+        </constraint>
+    </table>
+</schema>

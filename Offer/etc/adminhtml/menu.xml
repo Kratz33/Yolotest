@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Menu/etc/menu.xsd">
+    <menu>
+        <add id="Yolotest_Offer::Offers" title="Offers" action="yolotest_offer/offer" translate="title" module="Yolotest_Offer" sortOrder="95" resource="Yolotest_Offer::offer"/>
+    </menu>
+</config>

@@ -1,0 +1,18 @@
+<?php
+/** @var \Yolotest\Offer\Block\Offer $block */
+$offers = $block->getOffers();
+$mediaUrl = $block->getMediaUrl();
+?>
+
+<?php if (!empty($offers)): ?>
+    <div class="offers-container">
+        <?php foreach ($offers as $offer): ?>
+            <div class="offer-item">
+                <a href="<?= $block->escapeHtml($offer->getData('redirect_url')) ?>" target="_blank">
+                    <img src="<?= $block->escapeHtml($mediaUrl . $offer->getData('image')) ?>" alt="<?= $block->escapeHtml($offer->getData('label')) ?>" />
+                </a>
+                <p><?= $block->escapeHtml($offer->getData('label')) ?></p>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>

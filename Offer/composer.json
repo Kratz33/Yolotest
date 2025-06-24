@@ -1,0 +1,21 @@
+{
+    "name": "yolotest/offers",
+    "description": "Module for managing category offers in Magento 2",
+    "require": {
+        "php": "^8.1",
+        "magento/framework": "*"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Yolotest\\Offer\\": ""
+        }
+    }
+}
